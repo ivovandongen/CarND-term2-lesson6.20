@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.10)
-project(TEMPLATE)
+project(SigmaPointPrediction)
 
 set(CMAKE_CXX_STANDARD 14)
 
@@ -12,8 +12,10 @@ endif()
 
 
 
-add_executable(Template
+add_executable(SigmaPointPrediction
     ${CMAKE_SOURCE_DIR}/src/main.cpp
+    ${CMAKE_SOURCE_DIR}/src/ukf.h
+    ${CMAKE_SOURCE_DIR}/src/ukf.cpp
 )
 
-target_link_libraries(Template Eigen)
+target_link_libraries(SigmaPointPrediction Eigen)
